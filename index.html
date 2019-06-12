@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <title>Pew Pew, Album Review Home</title>
+      <link href="styles.css" type="text/css" rel="stylesheet"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!--
+         Creator: James Shaw
+         Date:5/21/19
+         CIS155
+         V3
+         This page is a barebones version of an album review site
+         -->
+      <style>
+         body > article > p{
+         background-color: green;
+         margin: 1em;
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <nav class="horizontal">
+            <ul>
+               <li><a href="index.html"> Home</a></li>
+               <li><a href="about.html"> About</a></li>
+            </ul>
+         </nav>
+      </header>
+      <ul id=mainsearch>
+         <li>Date</li>
+         <li>Artist</li>
+         <li>Rating</li>
+         <li id=expand>Search</li>
+         <li>
+            <a class="subsearchtitle">Name</a>
+            <ul class="subsearch">
+               <li><a class="subtile" href="#">A-Z</a></li>
+               <li><a href="#">Z-A</a></li>
+            </ul>
+         </li>
+      </ul>
+      <section id="home1" class="page">
+         <img src="album.png" title="Album" alt="Album Holder">
+      </section>
+      <p> Just another little tester. Album pictures will go here, probably be in block elements so they all conform to one shape.</p>
+      <article>
+         <!--M6LO3 Demonstrate how to create a table
+            This table is the centerpiece of the website.-->
+         <table class="albumreviews">
+            <tr>
+               <th>Cover</th>
+               <th>Album Name</th>
+               <th>Artist </th>
+               <th>Released </th>
+               <th>and or Rerelease </th>
+               <th>Rating </th>
+               <th>Review </th>
+            </tr>
+            <tr>
+			<!--Image Citation
+		Wolfmother,  Modular Recordings, Cosmic Egg, November 2009, https://allabouttherock.co.uk/wolfmother-Cosmic_Egg-deluxe-10th-anniversary-release/-->
+               <th><img src="CosmicEgg.jpg" title="Cosmic Egg" alt="WMA2"></th>
+               <td>Cosmic Egg</td>
+               <td>Wolfmother</td>
+               <!-- M6LO4 Demonstrate how to span multiple rows or multiple columns in a table
+                  This part will become far more prominent as I go over older albums that have anniversaries and such-->
+               <td colspan="2">2009</td>
+               <td>7.5/10</td>
+               <td><a href="#"> Link to Review</a></td>
+            </tr>
+            <tr>
+			<!--Image Citation
+		Wolfmother,  Modular Recordings, Wolfmother, October 2005, https://allabouttherock.co.uk/wolfmother-wolfmother-deluxe-10th-anniversary-release/-->
+               <th><img src="JokerandtheThief.jpg" title="Wolfmother" alt="WMA1"></th>
+               <td>Wolfmother</td>
+               <td>Wolfmother</td>
+               <td>2005</td>
+               <td>2015</td>
+               <td>8.5/10</td>
+               <td><a href="#"> Link to Review</a></td>
+            </tr>
+         </table>
+      </article>
+      <footer>
+         <aside>
+            <section id="Top" class="FTLinks">
+               <img src="up.png" alt="UP" usemap="#Top" width="100" height="50">
+               <p>Back to Top</p>
+            </section>
+            <map name="Top">
+               <area shape="rect" coords="-3,560,170,655" href="#top" alt="Top of Page">
+            </map>
+            <section id="Archive" class="FTLinks">
+               <a href="https://www.rockarchive.com/artists?page=1" target="_blank">
+                  <img src="archive.png" title="Archive" alt="Archive link"/>
+                  <p>An archive of many different rock artists</p>
+               </a>
+            </section>
+            <section id="Spotify" class="FTLinks">
+               <a href="https://www.spotify.com">
+                  <img src="spotify.png" title="Spotify" alt="Spotify link"/>
+                  <p>Spotify link in case anyone wants to check the bands out</p>
+               </a>
+            </section>
+         </aside>
+      </footer>
+   </body>
+</html>

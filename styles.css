@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+/*
+Creator: James Shaw
+Date:5/21/19
+CIS155
+V3
+This page is a barebones version of an album review site
+*/
+
+
+/*Layout*/
+
+html {
+	background: url(background.png) center center/ 100% 100% fixed;
+	font-size: 100%;
+	padding: 0%;
+	margin: 0%;
+	height: 100%
+}
+
+body {
+	border: 4px solid white;
+	font-family: verdana;
+	margin: 0px auto;
+	max-width: 960px;
+	min-width: 640px;
+	width: 95%;
+	min-height: 100%;
+}
+
+body>p {
+	font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+	text-align: right;
+	padding: 5px 0px 0px 0px;
+	font-size: 1.2em;
+}
+
+a[href] {
+	color: white;
+}
+
+article {
+	box-shadow: 2px 0px 9px 5px black;
+	border: 4px solid white;
+	background-color: gold;
+	background-image: linear-gradient(gold, silver, gold);
+}
+
+article>p {
+	border: 9px solid silver;
+	border-radius: 15px;
+}
+
+
+/*Table Styles*/
+
+
+/*M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall impact they have on the HTML)
+		Depending on how you collapse the borders, hide the borders, etc., will dratically shape the table, which I found out when I nuked my layout by hiding borders and added absurd widths*/
+
+table.albumreviews {
+	background: brown;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.albumreviews th,
+table.albumreviews td {
+	border: 5px solid black;
+	text-align: center;
+	color: gold;
+}
+
+
+/*Nav styles*/
+
+header a {
+	border: 3px outset silver;
+	background-color: grey;
+}
+
+nav.horizontal>ul>li {
+	position: relative;
+	display: block;
+	width: 15.49%;
+	float: right;
+}
+
+nav a:link {
+	color: gold;
+	text-decoration: none;
+	padding: 10px 40px 10px 40px;
+}
+
+nav a:link,
+nav a:visited {
+	color: red;
+	color: hsl(60, 100%, 50%);
+}
+
+nav a:hover,
+nav a:active {
+	color: pink;
+	background-color: white;
+}
+
+
+/*Section Stuff*/
+
+ul#mainsearch {
+	background-image: linear-gradient(white, silver);
+	box-shadow: 2px 0px 9px 5px black;
+	display: block;
+	float: left;
+	width: 97%;
+	background-color: grey;
+	padding: 10px;
+	border: 4px outset silver;
+}
+
+ul#mainsearch>li {
+	float: left;
+	padding: 0px 20px 0px 20px;
+	color: gold;
+	display: inline;
+	border: 4px outset blue;
+	background-color: black;
+}
+
+ul#mainsearch>li:hover {
+	color: gold;
+	border: 4px outset teal;
+	background-color: silver;
+}
+
+ul#mainsearch>li#expand:hover {
+	float: left;
+	color: gold;
+	border: 4px outset teal;
+	background-color: silver;
+	padding: 15px 40px 15px 40px;
+}
+
+ul#mainsearch>li#expand:hover::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+
+/*Sublist*/
+
+
+/*M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves)
+	This pulldown is located on the search bar, and extends a section under the Name sorting option that will allow one to sort the page by alphebetical order*/
+
+ul.subsearch {
+	display: none;
+}
+
+a.subsearchtitle:hover+ul.subsearch,
+ul.subsearch:hover {
+	display: block;
+}
+
+
+/*Sections*/
+
+section.page img {
+	display: block;
+	position: absolute;
+	width: 10%;
+	right: 0px;
+	bottom: 0px;
+	border: 2px outset white;
+	-webkit-filter: opacity(0.3);
+	-moz-webkit-filter: opacity(0.3);
+	filter: opacity(0.3);
+}
+
+#about1 {
+	color: white;
+}
+
+#about1 p {
+	background-color: grey;
+}
+
+#about2 h1 {
+	border: 4px outset silver;
+	background-image: linear-gradient(white, silver);
+}
+
+#about2 p {
+	font-family: 'Courier New', Courier, monospace;
+	background-image: linear-gradient(silver, gold, silver);
+	border: 4px outset brown;
+}
+#about3 h1 {
+	border: 4px outset silver;
+	background-image: linear-gradient(white, silver);
+}
+
+#about3 p {
+	font-family: 'Courier New', Courier, monospace;
+	background-image: linear-gradient(black, brown, black);
+	border: 4px outset brown;
+	color: white;
+}
+
+
+/*Footer*/
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	float: left;
+}
+
+section.FTLinks {
+	display: block;
+	width: 21%;
+	float: left;
+	clear: both;
+	border: 3px outset silver;
+	font-size: 100%;
+	text-align: left;
+	background-color: grey;
+}
+
+section.FTLinks p {
+	color: gold;
+	text-decoration: none;
+}
+
+section.FTLinks a {
+	text-decoration: none;
+}
+
+section img {
+	width: 20%;
+}
+
+#Archive img {
+	transform: rotate(180deg);
+}
+
+
+/*Mobile Styles*/
+
+@media only screen and (max-width: 480px) {
+	/*M5LO3 Use media queries to format a page differently for phones vs. PCs*/
+	body {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+	/*M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page)
+	The mobile emulators kill my soul and after resorting to just using my own phone I saw that creating a more linear layout is whats best for moblile, so I got rid of the footer that caused clutter and  started making nav bars columns.*/
+	header {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+	/*M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them)
+	this doesn't quite work how I would like, and I'm still troubleshooting some code around it, but this impacts the header nav bar in a way the stop the link padding from exploding on each other and stretching the screen */
+	nav.horizontal>ul>li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-basis: 5px;
+		flex-grow: 2;
+	}
+	/*M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them)
+	This makes the main search bar act like a column, rather than a horizontal bar, which makes the future sorting on mobile a lot easier on the eyes*/
+	ul#mainsearch {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+	footer {
+		display: none;
+	}
+}
