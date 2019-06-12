@@ -2,7 +2,7 @@
 
 /*
 Creator: James Shaw
-Date:5/21/19
+Date:6/11/19
 CIS155
 V3
 This page is a barebones version of an album review site
@@ -51,16 +51,11 @@ article {
 }
 
 article>p {
-	border: 9px solid silver;
 	border-radius: 15px;
 }
 
 
 /*Table Styles*/
-
-
-/*M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall impact they have on the HTML)
-		Depending on how you collapse the borders, hide the borders, etc., will dratically shape the table, which I found out when I nuked my layout by hiding borders and added absurd widths*/
 
 table.albumreviews {
 	background: brown;
@@ -81,6 +76,7 @@ table.albumreviews td {
 header a {
 	border: 3px outset silver;
 	background-color: grey;
+	background-image: linear-gradient(grey, silver, grey);
 }
 
 nav.horizontal>ul>li {
@@ -88,6 +84,10 @@ nav.horizontal>ul>li {
 	display: block;
 	width: 15.49%;
 	float: right;
+}
+
+nav.horizontal>ul>li#requestlink {
+	padding: 0px 30px 0px 0px;
 }
 
 nav a:link {
@@ -154,10 +154,6 @@ ul#mainsearch>li#expand:hover::after {
 
 /*Sublist*/
 
-
-/*M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves)
-	This pulldown is located on the search bar, and extends a section under the Name sorting option that will allow one to sort the page by alphebetical order*/
-
 ul.subsearch {
 	display: none;
 }
@@ -200,6 +196,7 @@ section.page img {
 	background-image: linear-gradient(silver, gold, silver);
 	border: 4px outset brown;
 }
+
 #about3 h1 {
 	border: 4px outset silver;
 	background-image: linear-gradient(white, silver);
@@ -254,23 +251,18 @@ section img {
 /*Mobile Styles*/
 
 @media only screen and (max-width: 480px) {
-	/*M5LO3 Use media queries to format a page differently for phones vs. PCs*/
 	body {
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-flow: row wrap;
 		flex-flow: row wrap;
 	}
-	/*M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page)
-	The mobile emulators kill my soul and after resorting to just using my own phone I saw that creating a more linear layout is whats best for moblile, so I got rid of the footer that caused clutter and  started making nav bars columns.*/
 	header {
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-flow: row wrap;
 		flex-flow: row wrap;
 	}
-	/*M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them)
-	this doesn't quite work how I would like, and I'm still troubleshooting some code around it, but this impacts the header nav bar in a way the stop the link padding from exploding on each other and stretching the screen */
 	nav.horizontal>ul>li {
 		display: flex;
 		justify-content: center;
@@ -278,8 +270,6 @@ section img {
 		flex-basis: 5px;
 		flex-grow: 2;
 	}
-	/*M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them)
-	This makes the main search bar act like a column, rather than a horizontal bar, which makes the future sorting on mobile a lot easier on the eyes*/
 	ul#mainsearch {
 		display: -webkit-flex;
 		display: flex;
@@ -289,4 +279,67 @@ section img {
 	footer {
 		display: none;
 	}
+}
+
+
+/*Submission Page*/
+
+article#subbox {
+	background: brown;
+}
+
+
+/*M7LO11 Demonstrate how to format a form with CSS (group your form styles together in your CSS file, and document their overall impact on the form)
+	I had to look at a lot of examples to figure this out, but if you put all of your forms and such in a flex box, it fixes the issue of everything looking like tetris pieces on the page*/
+
+div#spacer {
+	padding: 30px;
+}
+
+div#spacer>h1 {
+	color: gold;
+	border: 5px solid black;
+	text-align: center;
+}
+
+form#box {
+	display: flex;
+	flex-direction: column;
+	padding: 0px 250px 0px 0px;
+	border: 5px solid black;
+}
+
+form#box>label {
+	color: gold;
+}
+
+div#submit {
+	padding: 15px 0px 15px 0px;
+}
+
+
+/*Review Page*/
+
+article#reviewpage {
+	background: brown;
+}
+
+article#reviewpage>p {
+	color: gold;
+	border: 5px solid black;
+	border-radius: 0px;
+	padding: 0px 7px 0px 7px;
+}
+
+audio {
+	/*M8LO12 Demonstrate how to format media with CSS (CSS, group your media styles together and describe their overall impact on the media feature of your page)
+		It may not seem like much, but this keeps the audio media player containted to a reasonable size without losing the functionality of the progress bar*/
+	width: 300px;
+	padding: 5px;
+	padding: 15px 0px 15px 3px;
+	background: green;
+	color: purple;
+	transition: background 6s;
+	/*M8LO10 Demonstrate a CSS animation or transition (CSS, identify which is being done and its impact on the rendered HTML; note it has to include a time aspect, not be immediate)
+		I wish I could have figured out how to get the colors to loop, but this changes the starting background color to another over 6 seconds of loading the page.*/
 }

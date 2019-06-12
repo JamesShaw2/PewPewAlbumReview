@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <title>Pew Pew, Album Review Home</title>
+      <link href="styles.css" type="text/css" rel="stylesheet"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!--
+         Creator: James Shaw
+         Date:6/11/19
+         CIS155
+         V3
+         This page is a barebones version of an album review site
+         -->
+   </head>
+   <body>
+      <header>
+         <nav class="horizontal">
+            <ul>
+               <li><a href="index.html"> Home</a></li>
+               <li><a href="about.html"> About</a></li>
+               <li id="requestlink"><a href="submit.html">Requests</a></li>
+            </ul>
+         </nav>
+      </header>
+      <ul id=mainsearch>
+         <li>Date</li>
+         <li>Artist</li>
+         <li>Rating</li>
+         <li id=expand>Search</li>
+         <li>
+            <a class="subsearchtitle">Name</a>
+            <ul class="subsearch">
+               <li><a class="subtile" href="#">A-Z</a></li>
+               <li><a href="#">Z-A</a></li>
+            </ul>
+         </li>
+      </ul>
+      <p> Just another little tester. Album pictures will go here, probably be in block elements so they all conform to one shape.</p>
+      <article id="subbox">
+         <div id="spacer">
+            <h1> Submit an Album Review Request Here</h1>
+            <form id="box" action="https://www.google.com" method="get">
+               <label>Fill Out the Following</label> <br />
+               <label>Name of Album/Artist/Song:</label> 
+               <!--M7LO5 Demonstrate the use of a text box in a form-->
+               <input name="name" type="text" placeholder="ex. AC/ZepilHalen" required/> <br />
+               <label>Request Type:</label>
+               <!--M7LO8 Demonstrate the use of a selection list in a form-->
+               <select name="service">
+                  <br />
+                  <option>Album</option>
+                  <option>Artist</option>
+                  <option>Song</option>
+               </select>
+               <br />
+               <label>Special Request or Comment:</label>
+               <!--M7LO9 Demonstrate the use of a text area in a form-->
+               <textarea name="comment" rows="7" cols="1" required> </textarea>
+               <!--M7LO10 Demonstrate the use of a submit button in a form-->
+               <div id="submit">
+                  <input value="Submit Request" type="submit" /> <br /> 
+               </div>
+            </form>
+         </div>
+      </article>
+   </body>
+</html>
