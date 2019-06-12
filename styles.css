@@ -208,6 +208,12 @@ section.page img {
 	border: 4px outset brown;
 	color: white;
 }
+
+#about4 h1 {
+	border: 4px outset silver;
+	background-image: linear-gradient(white, silver);
+}
+
 #about4 p {
 	font-family: 'Courier New', Courier, monospace;
 	background-image: linear-gradient(black, brown, black);
